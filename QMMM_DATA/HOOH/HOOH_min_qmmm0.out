@@ -1,0 +1,507 @@
+
+          -------------------------------------------------------
+          Amber 18 SANDER                              2018
+          -------------------------------------------------------
+
+| Run on 10/29/2023 at 20:34:59
+
+|   Executable path: sander
+| Working directory: /home/anderson.santo/BilirrubinaQMpH7/BilirrubinaQMHOOH-H
+|          Hostname: localhost.localdomain
+
+  [-O]verwriting output
+
+File Assignments:
+|  MDIN: min_qmmm.in                                                           
+| MDOUT: min_qmmm0.out                                                         
+|INPCRD: min.ncrst                                                             
+|  PARM: Bilirrubina.prmtop                                                    
+|RESTRT: min_qmmm.ncrst                                                        
+|  REFC: refc                                                                  
+| MDVEL: mdvel                                                                 
+| MDFRC: mdfrc                                                                 
+|  MDEN: mden                                                                  
+| MDCRD: mdcrd                                                                 
+|MDINFO: mdinfo                                                                
+|  MTMD: mtmd                                                                  
+|INPDIP: inpdip                                                                
+|RSTDIP: rstdip                                                                
+|INPTRA: inptraj                                                               
+
+
+ Here is the input file:
+
+Initial min of our structure QMMM                                              
+ &cntrl                                                                        
+  imin=1, maxcyc=500, ncyc=200,                                                
+  cut=10, ntb=0, ntc=2, ntf=2,                                                 
+  ifqnt=1,                                                                     
+ /                                                                             
+  &qmmm                                                                        
+ iqmatoms=1457, 1458, 1459, 1460, 1461, 1462, 1463, 1464, 1465, 1466, 1467,    
+1493, 1494, 1495, 1496,1497, 1498, 1499, 1500, 1501, 1502, 1503,               
+1623, 1624, 1625, 1626, 1627, 1628,                                            
+2094, 2095, 2096, 2097, 2098, 2099, 2100, 2101, 2102, 2103, 2104,              
+2123, 2124, 2125, 2126, 2127, 2128, 2129, 2130, 2131, 2132, 2133,              
+6198, 6199, 6200, 6201, 6202, 6203, 6204, 6205, 6206, 6207, 6208,              
+6234, 6235, 6236, 6237, 6238, 6239, 6240, 6241, 6242, 6243, 6244,              
+6660, 6661, 6662, 6663,6664, 6665,                                             
+7081, 7082, 7083, 7084, 7085, 7086, 7087, 7088, 7089, 7090, 7091,              
+7108, 7109, 7110, 7111, 7112, 7113, 7114, 7115, 7116, 7117, 7118,              
+7197, 7198, 7199, 7200,7201, 7202,                                             
+8283, 8284, 8285,                                                              
+8286,8287,8288,8289,                                                           
+8302,8303,8304,8305,8306, 8307, 8308, 8309,8310,                               
+                                                                               
+                                                                               
+qmcharge=0,                                                                    
+ spin=1,                                                                       
+ qm_theory='EXTERN',                                                           
+ qmshake=1,                                                                    
+ qm_ewald=0,                                                                   
+ qmcut=100,                                                                    
+ /                                                                             
+ &orc                                                                          
+ num_threads=8,                                                                
+ method='b3lyp UKS',                                                           
+ basis='def2-SVP',                                                             
+ /                                                                             
+                                                                               
+                                                                               
+
+--------------------------------------------------------------------------------
+   1.  RESOURCE   USE: 
+--------------------------------------------------------------------------------
+
+| Flags:                                                                        
+|    NONPERIODIC   ntb=0 and igb=0: Setting up nonperiodic simulation
+|Largest sphere to fit in unit cell has radius =    78.873
+| New format PARM file being parsed.
+| Version =    1.000 Date = 08/07/22 Time = 19:17:03
+ NATOM  =   92547 NTYPES =      18 NBONH =   88296 MBONA  =    4377
+ NTHETH =    9143 MTHETA =    6003 NPHIH =   19281 MPHIA  =   18825
+ NHPARM =       0 NPARM  =       0 NNB   =  158189 NRES   =   28632
+ NBONA  =    4377 NTHETA =    6003 NPHIA =   18825 NUMBND =      74
+ NUMANG =     170 NPTRA  =     206 NATYP =      39 NPHB   =       1
+ IFBOX  =       1 NMXRS  =      24 IFCAP =       0 NEXTRA =       0
+ NCOPY  =       0
+
+
+|     Memory Use     Allocated
+|     Real             7225515
+|     Hollerith         306275
+|     Integer          3945945
+|     Max Pairs       30849000
+|     nblistReal       1110564
+|     nblist Int      12855431
+|       Total           252456 kbytes
+
+| Note: 1-4 EEL scale factors are being read from the topology file.
+
+| Note: 1-4 VDW scale factors are being read from the topology file.
+| Duplicated    0 dihedrals
+| Duplicated    0 dihedrals
+
+     BOX TYPE: RECTILINEAR
+
+--------------------------------------------------------------------------------
+   2.  CONTROL  DATA  FOR  THE  RUN
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+
+General flags:
+     imin    =       1, nmropt  =       0
+
+Nature and format of input:
+     ntx     =       1, irest   =       0, ntrx    =       1
+
+Nature and format of output:
+     ntxo    =       2, ntpr    =      50, ntrx    =       1, ntwr    =       1
+     iwrap   =       0, ntwx    =       0, ntwv    =       0, ntwe    =       0
+     ioutfm  =       1, ntwprt  =       0, idecomp =       0, rbornstat=      0
+
+Potential function:
+     ntf     =       2, ntb     =       0, igb     =       0, nsnb    =      25
+     ipol    =       0, gbsa    =       0, iesp    =       0
+     dielc   =   1.00000, cut     =  10.00000, intdiel =   1.00000
+
+Frozen or restrained atoms:
+     ibelly  =       0, ntr     =       0
+
+Energy minimization:
+     maxcyc  =     500, ncyc    =     200, ntmin   =       1
+     dx0     =   0.01000, drms    =   0.00010
+
+SHAKE:
+     ntc     =       2, jfastw  =       0
+     tol     =   0.00001
+
+QMMM options:
+             ifqnt = True       nquant =      122
+              qmgb =        0  qmcharge =        0   adjust_q =        2
+              spin =        1     qmcut = 100.0000    qmshake =        1
+          qmmm_int =        1
+     lnk_atomic_no =        1   lnk_dis =   1.0900 lnk_method =        1
+          qm_theory =     EXTERN verbosity =        0
+            qmqmdx = Analytical
+          qm_ewald =        0 qm_pme = False 
+|  INFO: Old style inpcrd file read
+
+
+--------------------------------------------------------------------------------
+   3.  ATOMIC COORDINATES AND VELOCITIES
+--------------------------------------------------------------------------------
+
+default_name                                                                    
+ begin time read from input coords =     0.000 ps
+
+ Number of triangulated 3-point waters found:    28079
+
+     Sum of charges from parm topology file =  -0.00000016
+     Forcing neutrality...
+QMMM: ADJUSTING CHARGES
+QMMM: ----------------------------------------------------------------------
+QMMM: adjust_q = 2
+QMMM: Uniformly adjusting the charge of MM atoms to conserve total charge.
+QMMM:                             qm_charge =    0
+QMMM: QM atom RESP charge sum (inc MM link) =    0.675
+QMMM: Adjusting each MM atom resp charge by =    0.000
+QMMM:          Sum of MM + QM region is now =    0.000
+QMMM: ----------------------------------------------------------------------
+ ---------------------------------------------------
+
+     eedmeth=4: Setting switch to one everywhere
+
+ ---------------------------------------------------
+| Local SIZE OF NONBOND LIST =   16614316
+| TOTAL SIZE OF NONBOND LIST =   16614316
+
+QMMM: Link Atom Information
+QMMM: ------------------------------------------------------------------------
+QMMM:  nlink =    11                   Link Coords              Resp Charges
+QMMM:    MM(typ)  -  QM(typ)      X         Y         Z         MM        QM
+QMMM:  1455 CX     1457 CT      42.007    44.421    55.973     0.019    -0.046
+QMMM:  1491 CX     1493 CT      46.107    42.388    52.238    -0.058    -0.007
+QMMM:  1621 CX     1623 2C      38.894    39.842    56.941     0.038    -0.030
+QMMM:  2092 CX     2094 CT      45.583    48.962    55.536     0.019    -0.046
+QMMM:  2121 CX     2123 CT      38.761    48.834    54.409     0.019    -0.046
+QMMM:  6196 CX     6198 CT      41.905    42.521    44.050     0.019    -0.046
+QMMM:  6232 CX     6234 CT      39.360    38.791    49.408     0.019    -0.046
+QMMM:  6658 CX     6660 2C      45.799    37.904    45.228     0.038    -0.030
+QMMM:  7079 CX     7081 CT      37.212    45.701    44.129     0.019    -0.046
+QMMM:  7106 CX     7108 CT      42.948    48.522    44.424     0.019    -0.046
+QMMM:  7194 2C     7197 2C      38.712    50.735    46.635     0.056     0.014
+QMMM: ------------------------------------------------------------------------
+
+  QMMM: QM Region Cartesian Coordinates (*=link atom) 
+  QMMM: QM_NO.   MM_NO.  ATOM         X         Y         Z
+  QMMM:     1     1457      C       41.5403   44.6826   55.0233
+  QMMM:     2     1458      H       40.4748   44.8373   55.1932
+  QMMM:     3     1459      H       41.9628   45.6222   54.6674
+  QMMM:     4     1460      C       41.7049   43.6443   53.9447
+  QMMM:     5     1461      N       41.2885   42.3373   54.0088
+  QMMM:     6     1462      H       40.7094   41.9349   54.7318
+  QMMM:     7     1463      C       41.6348   41.7232   52.8719
+  QMMM:     8     1464      H       41.4109   40.6916   52.6435
+  QMMM:     9     1465      N       42.2429   42.5906   52.0494
+  QMMM:    10     1466      C       42.3186   43.8104   52.7346
+  QMMM:    11     1467      H       42.7643   44.7286   52.3813
+  QMMM:    12     1493      C       46.3998   43.2951   51.7097
+  QMMM:    13     1494      H       45.8567   44.1377   52.1374
+  QMMM:    14     1495      H       47.4624   43.4737   51.8743
+  QMMM:    15     1496      C       46.1464   43.2838   50.2197
+  QMMM:    16     1497      N       45.5594   44.2971   49.4377
+  QMMM:    17     1498      C       45.5185   43.8025   48.1855
+  QMMM:    18     1499      H       45.1378   44.3179   47.3161
+  QMMM:    19     1500      N       46.0262   42.5662   48.1430
+  QMMM:    20     1501      H       46.0665   41.9513   47.3428
+  QMMM:    21     1502      C       46.4256   42.2277   49.4049
+  QMMM:    22     1503      H       46.8743   41.2836   49.6763
+  QMMM:    23     1623      C       38.5125   39.2552   56.1053
+  QMMM:    24     1624      H       38.2775   38.2451   56.4410
+  QMMM:    25     1625      H       37.5889   39.7012   55.7362
+  QMMM:    26     1626      C       39.5476   39.1569   54.9733
+  QMMM:    27     1627      O       39.1948   39.3375   53.7863
+  QMMM:    28     1628      O       40.7344   38.8857   55.2655
+  QMMM:    29     2094      C       45.9045   49.2932   54.5485
+  QMMM:    30     2095      H       45.7317   50.3668   54.4738
+  QMMM:    31     2096      H       46.9797   49.1479   54.4447
+  QMMM:    32     2097      C       45.2257   48.6671   53.3594
+  QMMM:    33     2098      N       44.1182   49.1835   52.7330
+  QMMM:    34     2099      H       43.4705   49.8605   53.1101
+  QMMM:    35     2100      C       43.9426   48.5097   51.5920
+  QMMM:    36     2101      H       43.1766   48.7467   50.8684
+  QMMM:    37     2102      N       44.8296   47.5075   51.4847
+  QMMM:    38     2103      C       45.6643   47.6062   52.6066
+  QMMM:    39     2104      H       46.5377   47.0056   52.8134
+  QMMM:    40     2123      C       38.5958   47.7583   54.4669
+  QMMM:    41     2124      H       39.4979   47.2766   54.8440
+  QMMM:    42     2125      H       37.7912   47.5437   55.1703
+  QMMM:    43     2126      C       38.2763   47.1411   53.1270
+  QMMM:    44     2127      N       37.5570   47.7328   52.1143
+  QMMM:    45     2128      H       37.0525   48.6041   52.1946
+  QMMM:    46     2129      C       37.7845   47.0519   50.9803
+  QMMM:    47     2130      H       37.4738   47.3677   49.9953
+  QMMM:    48     2131      N       38.5522   45.9822   51.2338
+  QMMM:    49     2132      C       38.8764   46.0365   52.5923
+  QMMM:    50     2133      H       39.5831   45.4023   53.1070
+  QMMM:    51     6198      C       42.2951   43.1686   44.8354
+  QMMM:    52     6199      H       43.2204   43.6323   44.4937
+  QMMM:    53     6200      H       41.5739   43.9659   45.0151
+  QMMM:    54     6201      C       42.5585   42.4653   46.1439
+  QMMM:    55     6202      N       43.2295   41.2760   46.3081
+  QMMM:    56     6203      H       43.6644   40.7131   45.5911
+  QMMM:    57     6204      C       43.2914   40.9961   47.6135
+  QMMM:    58     6205      H       43.8364   40.1611   48.0284
+  QMMM:    59     6206      N       42.7045   41.9730   48.3196
+  QMMM:    60     6207      C       42.2007   42.8951   47.3932
+  QMMM:    61     6208      H       41.6921   43.8224   47.6120
+  QMMM:    62     6234      C       38.6137   39.2042   50.0864
+  QMMM:    63     6235      H       37.6255   39.0594   49.6499
+  QMMM:    64     6236      H       38.6317   38.6423   51.0203
+  QMMM:    65     6237      C       38.7790   40.6580   50.4566
+  QMMM:    66     6238      N       38.6745   41.1397   51.7392
+  QMMM:    67     6239      H       38.6569   40.5681   52.5717
+  QMMM:    68     6240      C       38.8229   42.4723   51.7026
+  QMMM:    69     6241      H       38.8298   43.1077   52.5759
+  QMMM:    70     6242      N       39.0190   42.8843   50.4391
+  QMMM:    71     6243      C       38.9768   41.7375   49.6344
+  QMMM:    72     6244      H       39.0827   41.7060   48.5601
+  QMMM:    73     6660      C       45.7193   37.8423   46.3133
+  QMMM:    74     6661      H       44.6590   37.8431   46.5663
+  QMMM:    75     6662      H       46.1321   36.8892   46.6437
+  QMMM:    76     6663      C       46.3865   38.9766   47.0973
+  QMMM:    77     6664      O       46.1415   40.1644   46.7991
+  QMMM:    78     6665      O       47.1635   38.7146   48.0493
+  QMMM:    79     7081      C       37.1394   46.3210   45.0228
+  QMMM:    80     7082      H       37.2107   47.3743   44.7515
+  QMMM:    81     7083      H       36.1561   46.1696   45.4682
+  QMMM:    82     7084      C       38.1585   46.0400   46.0884
+  QMMM:    83     7085      N       39.4101   46.5910   46.1564
+  QMMM:    84     7086      H       39.7442   47.3483   45.5776
+  QMMM:    85     7087      C       39.9591   46.2190   47.3164
+  QMMM:    86     7088      H       40.8981   46.6150   47.6739
+  QMMM:    87     7089      N       39.1302   45.4037   47.9949
+  QMMM:    88     7090      C       37.9774   45.2862   47.2153
+  QMMM:    89     7091      H       37.0683   44.7703   47.4869
+  QMMM:    90     7108      C       43.6990   47.7745   44.6790
+  QMMM:    91     7109      H       43.2876   46.7830   44.4896
+  QMMM:    92     7110      H       44.5689   47.8960   44.0335
+  QMMM:    93     7111      C       44.1450   47.8145   46.1230
+  QMMM:    94     7112      N       44.6247   48.9088   46.7988
+  QMMM:    95     7113      H       44.6318   49.8434   46.4159
+  QMMM:    96     7114      C       44.8782   48.5492   48.0667
+  QMMM:    97     7115      H       45.2415   49.2189   48.8323
+  QMMM:    98     7116      N       44.6163   47.2433   48.2419
+  QMMM:    99     7117      C       44.0910   46.7882   47.0240
+  QMMM:   100     7118      H       43.7161   45.7983   46.8098
+  QMMM:   101     7197      C       38.5044   49.9905   47.4029
+  QMMM:   102     7198      H       37.8962   50.4575   48.1775
+  QMMM:   103     7199      H       37.9094   49.1936   46.9566
+  QMMM:   104     7200      C       39.7546   49.3471   48.0600
+  QMMM:   105     7201      O       40.8411   49.3023   47.4424
+  QMMM:   106     7202      O       39.6513   48.8058   49.1912
+  QMMM:   107     8283      Cu      39.3665   44.7891   49.8727
+  QMMM:   108     8284      Cu      44.8824   46.2073   49.9450
+  QMMM:   109     8285      Cu      42.9376   42.1846   50.2559
+  QMMM:   110     8286      O       41.6150   47.2858   49.8364
+  QMMM:   111     8287      O       41.4213   46.9169   51.2588
+  QMMM:   112     8288      H       40.8642   47.8587   49.6025
+  QMMM:   113     8289      H       41.2420   47.7822   51.6658
+  QMMM:   114     8302      O       43.1926   39.4020   50.8096
+  QMMM:   115     8303      H       43.2581   38.7756   50.0888
+  QMMM:   116     8304      H       42.5933   38.9895   51.4317
+  QMMM:   117     8305      O       41.3437   38.2742   52.4623
+  QMMM:   118     8306      H       41.8282   37.7049   53.0601
+  QMMM:   119     8307      H       40.6403   38.6409   52.9981
+  QMMM:   120     8308      O       43.0629   37.6628   48.7678
+  QMMM:   121     8309      H       43.3712   36.8104   48.4602
+  QMMM:   122     8310      H       42.4904   37.9772   48.0680
+  QMMM:   123              *H       42.0068   44.4207   55.9730
+  QMMM:   124              *H       46.1071   42.3877   52.2380
+  QMMM:   125              *H       38.8935   39.8418   56.9413
+  QMMM:   126              *H       45.5833   48.9619   55.5360
+  QMMM:   127              *H       38.7608   48.8342   54.4095
+  QMMM:   128              *H       41.9050   42.5212   44.0499
+  QMMM:   129              *H       39.3600   38.7914   49.4077
+  QMMM:   130              *H       45.7993   37.9036   45.2280
+  QMMM:   131              *H       37.2115   45.7013   44.1290
+  QMMM:   132              *H       42.9478   48.5219   44.4240
+  QMMM:   133              *H       38.7119   50.7353   46.6346
+
+--------------------------------------------------------------------------------
+  3.1 QM CALCULATION INFO
+--------------------------------------------------------------------------------
+
+| Please also cite the following work for the use of the QM/MM interface:
+
+| A. W. G"otz, M. A. Clark, R. C. Walker
+| "An extensible interface for ab initio QM/MM molecular dynamics simulations
+|  with AMBER"
+| J. Comput. Chem. 35 (2014) 95-108.
+| DOI: 10.1002/jcc.23444
+
+ Constants for unit conversion taken from
+ Mohr, Taylor, Newell, Rev. Mod. Phys. 80 (2008) 633-730
+ and using the thermochemical calorie (1 cal = 4.184 J):
+
+ A_TO_BOHRS  =  1.889726132873E+00
+ AU_TO_KCAL  =  6.2750946943E+02
+ AU_TO_DEBYE =  2.54174623E+00
+
+   >>> Running QM calculation with Orca <<<
+
+| Program orca found!
+| Executable location: /usr/apps/orca_3_0_2_linux_x86-64/orca
+
+
+| "NONE" or "-1" indicates ORCA default values
+
+| &orc
+|   basis        = DEF2-SVP            
+|   cbasis       = NONE                
+|   jbasis       = NONE                
+|   method       = b3lyp UKS           
+|   convkey      = verytightscf        
+|   guess        = read                
+|   scfconv      =   -1
+|   grid         =    4
+|   finalgrid    =    6
+|   maxiter      =  100
+|   maxcore      = 1024
+|   ntpr         = 50
+|   num_threads  = 8
+|   debug        =  0
+|   dipole       = F
+|   use_template = F
+| /
+--------------------------------------------------------------------------------
+   4.  RESULTS
+--------------------------------------------------------------------------------
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+      1      -5.5162E+06     1.9315E+01     6.3214E+01     O       13678
+
+ BOND    =      304.0551  ANGLE   =     1126.4274  DIHED      =     6269.1536
+ VDWAALS =    68773.4327  EEL     =  -525276.4778  HBOND      =        0.0000
+ 1-4 VDW =     1648.9459  1-4 EEL =    18587.7151  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087638.8265
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+     50      -5.5329E+06     1.9086E+01     5.8859E+01     O       13678
+
+ BOND    =      295.9907  ANGLE   =     1145.1404  DIHED      =     6270.3633
+ VDWAALS =    66034.8118  EEL     =  -539193.6014  HBOND      =        0.0000
+ 1-4 VDW =     1650.0597  1-4 EEL =    18573.4385  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087656.5061
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    100      -5.5329E+06     1.9086E+01     5.8859E+01     O       13678
+
+ BOND    =      295.9907  ANGLE   =     1145.1407  DIHED      =     6270.3633
+ VDWAALS =    66034.7794  EEL     =  -539193.5612  HBOND      =        0.0000
+ 1-4 VDW =     1650.0597  1-4 EEL =    18573.4385  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087656.5063
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    150      -5.5329E+06     1.9086E+01     5.8859E+01     O       13678
+
+ BOND    =      295.9907  ANGLE   =     1145.1409  DIHED      =     6270.3634
+ VDWAALS =    66034.7477  EEL     =  -539210.8430  HBOND      =        0.0000
+ 1-4 VDW =     1650.0597  1-4 EEL =    18573.4385  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087656.5064
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    200      -5.5329E+06     1.9086E+01     5.8859E+01     O       13678
+
+ BOND    =      295.9906  ANGLE   =     1145.1412  DIHED      =     6270.3634
+ VDWAALS =    66034.7126  EEL     =  -539256.9922  HBOND      =        0.0000
+ 1-4 VDW =     1650.0597  1-4 EEL =    18573.4384  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087656.5068
+
+     ... RESTARTED DUE TO LINMIN FAILURE ...
+
+     ... RESTARTED DUE TO LINMIN FAILURE ...
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    250      -5.5330E+06     1.9086E+01     5.8859E+01     O       13678
+
+ BOND    =      295.9906  ANGLE   =     1145.1413  DIHED      =     6270.3634
+ VDWAALS =    66034.7011  EEL     =  -539285.8469  HBOND      =        0.0000
+ 1-4 VDW =     1650.0597  1-4 EEL =    18573.4383  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087656.5070
+
+     ... RESTARTED DUE TO LINMIN FAILURE ...
+
+     ... RESTARTED DUE TO LINMIN FAILURE ...
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    300      -5.5330E+06     1.9086E+01     5.8859E+01     O       13678
+
+ BOND    =      295.9906  ANGLE   =     1145.1414  DIHED      =     6270.3634
+ VDWAALS =    66034.6875  EEL     =  -539285.8293  HBOND      =        0.0000
+ 1-4 VDW =     1650.0597  1-4 EEL =    18573.4382  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087656.5065
+
+     ... RESTARTED DUE TO LINMIN FAILURE ...
+
+     ***** REPEATED LINMIN FAILURE *****
+
+     ***** SEE http://ambermd.org/Questions/linmin.html FOR MORE INFO *****
+
+
+                    FINAL RESULTS
+
+
+
+   NSTEP       ENERGY          RMS            GMAX         NAME    NUMBER
+    315      -5.5330E+06     1.9086E+01     5.8859E+01     O       13678
+
+ BOND    =      295.9906  ANGLE   =     1145.1414  DIHED      =     6270.3634
+ VDWAALS =    66034.6820  EEL     =  -539285.8222  HBOND      =        0.0000
+ 1-4 VDW =     1650.0597  1-4 EEL =    18573.4382  RESTRAINT  =        0.0000
+ EXTERNESCF = -5087656.5063
+
+--------------------------------------------------------------------------------
+   5.  TIMINGS
+--------------------------------------------------------------------------------
+
+|                Build the list             7.54 (99.88% of List )
+|                Other                      0.01 ( 0.12% of List )
+|             List time                  7.55 ( 3.53% of Nonbo)
+|                   Short_ene time           204.38 (99.29% of Direc)
+|                   Other                      1.46 ( 0.71% of Direc)
+|                Direct Ewald time        205.84 (99.85% of Ewald)
+|                Other                      0.30 ( 0.15% of Ewald)
+|             Ewald time               206.14 (96.47% of Nonbo)
+|          Nonbond force            213.69 ( 0.03% of Force)
+|          QMMM                  752362.11 (100.0% of Force)
+|       Force time            752579.75 (100.0% of Runmd)
+|    Runmd Time            752579.75 (100.0% of Total)
+| Total time            752584.12 (100.0% of ALL  )
+
+| Number of list builds   :         13
+
+| Highest rstack allocated:       1505
+| Highest istack allocated:        301
+|           Job began  at 20:34:59.221  on 10/29/2023
+|           Setup done at 20:35:00.059  on 10/29/2023
+|           Run   done at 14:38:03.340  on 11/07/2023
+|     wallclock() was called   10780 times
+
+|3D-RISM memory allocation summary
+|Type          Maximum        Current   
+|Integer       0.00000 GB     0.00000 GB
+|Real          0.00000 GB     0.00000 GB
+|Logical       0.00000 GB     0.00000 GB
+|Character     0.00000 GB     0.00000 GB
+|---------------------------------------
+|Total         0.00000 GB     0.00000 GB
